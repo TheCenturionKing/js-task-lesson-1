@@ -65,24 +65,20 @@ if (yourResult == 0 || yourResult > 10 || yourResult < 0 || isNaN(yourResult)) {
 
 const resultExam = prompt("Введите ваш балл за экзамен от 0 до 100");
 const numberOfProjects = prompt("Сколько проектов вы успешно сделали?");
-if (resultExam >= "90" && numberOfProjects >= "10") {
+if (resultExam >= "90" || numberOfProjects >= "10") {
   console.log(
     `100 баллов Гриффиндору \n Ваш общий балл: ${resultExam} \nКолличество ваших проектов ${numberOfProjects}`
   );
 } else if (
-  resultExam >= "75" &&
-  resultExam <= "89" &&
-  numberOfProjects >= "5" &&
-  numberOfProjects <= "9"
+  (resultExam >= "75" && resultExam <= "89") ||
+  (numberOfProjects >= "5" && numberOfProjects <= "9")
 ) {
   console.log(
     `90 баллов Слизарену \n Ваш общий балл: ${resultExam} \n Колличество ваших проектов: ${numberOfProjects}`
   );
 } else if (
-  resultExam >= "50" &&
-  resultExam <= "74" &&
-  numberOfProjects >= "2" &&
-  numberOfProjects <= "4"
+  (resultExam >= "50" && resultExam <= "74") ||
+  (numberOfProjects >= "2" && numberOfProjects <= "4")
 ) {
   console.log(
     `75 баллов Когтеврану \n Ваш общий балл:${resultExam}\nКолличество ваших проектов:${numberOfProjects}`
